@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1>Welcome to Student Results Page</h1>
-    <p>This is your website's homepage.</p>
+
+    <!-- Form to collect roll number input -->
+    <form action="/result" method="GET">
+        <label for="rollNumber">Enter Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required>
+        <button type="submit">Get Results</button>
+    </form>
+
 </body>
 </html>
