@@ -1,0 +1,31 @@
+
+
+
+<h1>Student Result</h1>
+
+<% if (student) { %>
+    <p><strong>Roll Number:</strong> <%= student.rollNumber %></p>
+    <p><strong>Name:</strong> <%= student.name %></p>
+
+    <h3>Subject Marks:</h3>
+    <table border="1">
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <% student.subjects.forEach(function(subject) { %>
+            <tr>
+                <td><%= subject.subject %></td>
+                <td><%= subject.marks %></td>
+            </tr>
+        <% }); %>
+    </table>
+
+    <h3>Total Marks: <%= totalMarks %></h3>
+    <h3>GPA: <%= gpa.toFixed(2) %></h3>
+
+<% } else { %>
+    <p>No student found for the provided roll number.</p>
+<% } %>
+
+<a href="/">Go Back</a>
